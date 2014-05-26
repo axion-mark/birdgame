@@ -47,3 +47,18 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
+jQuery(document).ready(function($) {
+	$('.stage').click(function() {
+		//start game
+		$('.sprite').stop(true, false);
+		$('.sprite').animate({
+		    top: "-=100"
+		}, 300, function() {
+		    $('.sprite').animate({
+			    top: "+=1000"
+			}, 1500, function() {
+			    // Animation complete.
+			});
+		});
+	});
+});
