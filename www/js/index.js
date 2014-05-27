@@ -49,6 +49,8 @@ var app = {
 };
 
 jQuery(document).ready(function($) {
+	var height = $('.stage').height();
+	$('.data').html(height);
 	var stage = document.getElementById("stage");
 	stage.addEventListener('touchstart', jump, false);
 });
