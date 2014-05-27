@@ -51,7 +51,7 @@ var app = {
 jQuery(document).ready(function($) {
 	var jumpCount = 0;
 	window.setInterval(function(){
-		alive(jumpcount);
+		alive(jumpCount);
 	}, 1);
 	var stage = document.getElementById("stage");
 	stage.addEventListener('touchstart', jump, false);
