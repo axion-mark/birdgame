@@ -48,37 +48,33 @@ var app = {
     }
 };
 
-window.addEventListener('load', function() {
-	var stage;
+jQuery(document).ready(function($) {
+	var stage = document.getElementById("stage");
+	stage.addEventListener('touchstart', jump, false);
+});
 
-	stage = document.getElementById('stage');
-
-	// Android 2.2 needs FastClick to be instantiated before the other listeners so that the stopImmediatePropagation hack can work.
-	FastClick.attach(stage);
-
-	stage.addEventListener('click', function(event) {
-		var start = $('.sprite').position();
-		if(start.top < 110) {
-			var remaining = start.top;
-			var remainingRatio = remaining / 100;
-			var remainingSpeed = 300 * remainingRatio;
-			remaining = "-="+remaining
-			$('.sprite').animate({top:0}, remainingSpeed, function() {
-				alert("You've gone too high!");
-				$('.sprite').css('top', '30%');
-			}).stop(false, false);
-			return;
-		}
-		//start game
-		$('.sprite').stop(true, false);
-		$('.sprite').animate({
-		    top: "-=100"
-		}, 300, function() {
-		    $('.sprite').animate({
-			    top: "+=1000"
-			}, 1500, function() {
-			    // Animation complete.
-			});
+function jump() {
+	var start = $('.sprite').position();
+	if(start.top < 110) {
+		var remaining = start.top;
+		var remainingRatio = remaining / 100;
+		var remainingSpeed = 300 * remainingRatio;
+		remaining = "-="+remaining
+		$('.sprite').animate({top:0}, remainingSpeed, function() {
+			alert("You've gone too high!");
+			$('.sprite').css('top', '30%');
+		}).stop(false, false);
+		return;
+	}
+	//start game
+	$('.sprite').stop(true, false);
+	$('.sprite').animate({
+	    top: "-=100"
+	}, 300, function() {
+	    $('.sprite').animate({
+		    top: "+=1000"
+		}, 1500, function() {
+		    // Animation complete.
 		});
-	}, false);
-}, false);
+	});
+}
