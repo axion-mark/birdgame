@@ -49,8 +49,13 @@ var app = {
 };
 
 jQuery(document).ready(function($) {
-	var height = $('.stage').height();
-	$('.data').html(height);
+	window.setInterval(function(){
+		if (alive()) {} else {
+			$('.sprite').stop(true, false);
+			alert("You've gone too low!");
+			$('.sprite').css('top', '50%');
+		}
+	}, 100);
 	var stage = document.getElementById("stage");
 	stage.addEventListener('touchstart', jump, false);
 });
@@ -62,13 +67,14 @@ function jump() {
 		var remainingRatio = remaining / 100;
 		var remainingSpeed = 300 * remainingRatio;
 		remaining = "-="+remaining
-		$('.sprite').animate({top:0}, remainingSpeed, function() {
+		$('.sprite').animate({
+			top: 0
+		}, remainingSpeed, function() {
 			alert("You've gone too high!");
-			$('.sprite').css('top', '30%');
+			$('.sprite').css('top', '50%');
 		}).stop(false, false);
 		return;
 	}
-	//start game
 	$('.sprite').stop(true, false);
 	$('.sprite').animate({
 	    top: "-=100"
@@ -79,4 +85,11 @@ function jump() {
 		    // Animation complete.
 		});
 	});
+}
+
+function alive() {
+	var stageHeight = $('.stage').height();
+	var spritePosition = $('.sprite').position();
+	$('.data').html('stage height: '+stageHeight+' position: '+spritePosition.top);
+	return true;
 }
