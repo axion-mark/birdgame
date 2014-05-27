@@ -54,3 +54,10 @@ body {
 	left: 30%;
 	margin-top: -10px;
 }
+.obstacle {
+	height: 100%;
+	width: 60px;
+	position: absolute;
+	right: -60px;
+	background: #000000;
+}

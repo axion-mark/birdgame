@@ -49,53 +49,53 @@ var app = {
 };
 
 jQuery(document).ready(function($) {
+	var jumpCount = 0;
 	window.setInterval(function(){
-		alive();
+		alive(jumpcount);
 	}, 1);
 	var stage = document.getElementById("stage");
 	stage.addEventListener('touchstart', jump, false);
 });
 
-function jump() {
-	/*var start = $('.sprite').position();
-	if(start.top < 110) {
-		var remaining = start.top;
-		var remainingRatio = remaining / 100;
-		var remainingSpeed = 300 * remainingRatio;
-		remaining = "-="+remaining
-		$('.sprite').animate({
-			top: 0
-		}, remainingSpeed, function() {
-			alert("You've gone too high!");
-			$('.sprite').css('top', '50%');
-		}).stop(false, false);
-		return;
-	}*/
+function addObstacle() {
+	window.setInterval(function(){
+		$('.stage').append('<div class="obstacle"></div>');
+		$('.obstacle').animate({
+			right: "+=1000"
+		},3000);
+	}, 5000);
+}
+
+function jump(jumpCount) {
+	jumpCount++;
+	if (jumpCount == 1) {
+		addObstacle();
+	}
 	$('.sprite').stop(true, false);
 	$('.sprite').animate({
 	    top: "-=100"
 	}, 300, function() {
 	    $('.sprite').animate({
 		    top: "+=1000"
-		}, 1500, function() {
-		    // Animation complete.
-		});
+		}, 1500);
 	});
 }
 
 function alive() {
 	var stageHeight = $('.stage').height();
 	var spritePosition = $('.sprite').position();
-	if (spritePosition.top <= 10) {
+	if (spritePosition.top < 10) {
 		$('.sprite').stop(false, false);
 		alert("You've gone too high!");
 		$('.sprite').css('top', '50%');
+		jumpCount = 0;
 		return;
 	}
-	if (parseInt(spritePosition.top) >= parseInt(stageHeight) - 10) {
+	if (parseInt(spritePosition.top) > parseInt(stageHeight) - 10) {
 		$('.sprite').stop(false, false);
 		alert("You've gone too low!");
 		$('.sprite').css('top', '50%');
+		jumpCount = 0;
 		return;
 	}
 }
