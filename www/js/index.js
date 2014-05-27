@@ -55,7 +55,7 @@ jQuery(document).ready(function($) {
 			alert("You've gone too low!");
 			$('.sprite').css('top', '50%');
 		}
-	}, 100);
+	}, 1);
 	var stage = document.getElementById("stage");
 	stage.addEventListener('touchstart', jump, false);
 });
