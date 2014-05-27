@@ -47,8 +47,18 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
-jQuery(document).ready(function($) {
-	$('.stage').click(function() {
+
+window.addEventListener('load', function() {
+	var stage;
+
+	stage = document.getElementById('stage');
+	//sprite = document.getElementById('sprite');
+
+	// Android 2.2 needs FastClick to be instantiated before the other listeners so that the stopImmediatePropagation hack can work.
+	FastClick.attach(stage);
+
+	stage.addEventListener('click', function(event) {
+		
 		var start = $('.sprite').position();
 		if(start.top < 110) {
 			var remaining = start.top;
@@ -72,6 +82,6 @@ jQuery(document).ready(function($) {
 			    // Animation complete.
 			});
 		});
-	});
-	
-});
+		
+	}, false);
+}, false);
