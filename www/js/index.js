@@ -88,6 +88,7 @@ function alive() {
 	var spritePosition = $('.sprite').position();
 	$('.data').html('stage height: '+stageHeight+' position: '+spritePosition.top);
 	if (spritePosition.top < 0) {
+		$('.sprite').hide();
 		$('.sprite').stop(false, false);
 		alert("You've gone too high!");
 		$('.sprite').css('top', '50%');
