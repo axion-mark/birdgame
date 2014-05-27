@@ -48,8 +48,7 @@ var app = {
     }
 };
 jQuery(document).ready(function($) {
-	FastClick.attach(document.body);
-	$('.stage').touchstart(function() {
+	$('.stage').click(function() {
 		var start = $('.sprite').position();
 		if(start.top < 110) {
 			var remaining = start.top;
