@@ -62,7 +62,7 @@ jQuery(document).ready(function($) {
 });
 
 function addObstacle() {
-	$('.stage').append('<div class="obstacle"></div>');
+	$('.stage').append('<div class="obstacle"><div class="obstacle-top"></div><div class="obstacle-bottom"></div></div>');
 	$('.obstacle').animate({
 		right: "+=1000"
 	}, 10000, "linear");
