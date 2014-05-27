@@ -84,22 +84,15 @@ function jump() {
 }
 
 function alive() {
-	$('.sprite').hide();
 	var stageHeight = $('.stage').height();
 	var spritePosition = $('.sprite').position();
-	$('.data').html('stage height: '+stageHeight+' position: '+spritePosition.top);
-	if (spritePosition.top <= 0) {
-		$('.sprite').hide();
+	//$('.data').html('stage height: '+stageHeight+' position: '+spritePosition.top);
+	if (parseInt(spritePosition.top) <= 0) {
 		$('.sprite').stop(false, false);
-		alert("You've gone too high!");
-		$('.sprite').css('top', '50%');
-		return;
+		return false;
 	}
-	if (spritePosition.top >= stageHeight) {
-		$('.sprite').hide();
+	if (parseInt(spritePosition.top) >= parseInt(stageHeight)) {
 		$('.sprite').stop(false, false);
-		alert("You've gone too high!");
-		$('.sprite').css('top', '50%');
-		return;
+		return false;
 	}
 }
