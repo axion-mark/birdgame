@@ -56,7 +56,7 @@ jQuery(document).ready(function($) {
 		if($('.sprite').hasClass('stationary')) {} else {
 			addObstacle();
 		}
-	}, 750);
+	}, 1250);
 	var stage = document.getElementById("stage");
 	stage.addEventListener('touchstart', jump, false);
 });
@@ -86,12 +86,14 @@ function alive() {
 		$('.sprite').stop(false, false);
 		alert("You've gone too high!");
 		$('.sprite').css('top', '50%').addClass('stationary');
+		$('.obstacle').remove();
 		return;
 	}
 	if (parseInt(spritePosition.top) > parseInt(stageHeight) - 10) {
 		$('.sprite').stop(false, false);
 		alert("You've gone too low!");
 		$('.sprite').css('top', '50%').addClass('stationary');
+		$('.obstacle').remove();
 		return;
 	}
 }
