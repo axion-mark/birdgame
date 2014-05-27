@@ -84,17 +84,19 @@ function jump() {
 }
 
 function alive() {
+	$('.sprite').hide();
 	var stageHeight = $('.stage').height();
 	var spritePosition = $('.sprite').position();
 	$('.data').html('stage height: '+stageHeight+' position: '+spritePosition.top);
-	if (spritePosition.top < 0) {
+	if (spritePosition.top <= 0) {
 		$('.sprite').hide();
 		$('.sprite').stop(false, false);
 		alert("You've gone too high!");
 		$('.sprite').css('top', '50%');
 		return;
 	}
-	if (spritePosition.top > stageHeight) {
+	if (spritePosition.top >= stageHeight) {
+		$('.sprite').hide();
 		$('.sprite').stop(false, false);
 		alert("You've gone too high!");
 		$('.sprite').css('top', '50%');
