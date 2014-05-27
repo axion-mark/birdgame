@@ -56,7 +56,7 @@ window.addEventListener('load', function() {
 	// Android 2.2 needs FastClick to be instantiated before the other listeners so that the stopImmediatePropagation hack can work.
 	FastClick.attach(stage);
 
-	testB.addEventListener('click', function(event) {
+	stage.addEventListener('click', function(event) {
 		var start = $('.sprite').position();
 		if(start.top < 110) {
 			var remaining = start.top;
