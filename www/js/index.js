@@ -49,6 +49,17 @@ var app = {
 };
 jQuery(document).ready(function($) {
 	$('.stage').click(function() {
+		var start = $('.sprite').position();
+		if(start.top < 110) {
+			var remaining = start.top;
+			var remainingRatio = remaining / 100;
+			var remainingSpeed = 300 * remainingRatio;
+			remaining = "-="+remaining
+			$('.sprite').animate({top:0}, remainingSpeed, function() {
+				alert("You've gone too high!");
+			}).stop(false, false);
+			return;
+		}
 		//start game
 		$('.sprite').stop(true, false);
 		$('.sprite').animate({
@@ -61,4 +72,5 @@ jQuery(document).ready(function($) {
 			});
 		});
 	});
+	
 });
