@@ -57,6 +57,7 @@ jQuery(document).ready(function($) {
 			remaining = "-="+remaining
 			$('.sprite').animate({top:0}, remainingSpeed, function() {
 				alert("You've gone too high!");
+				$('.sprite').css('top', '30%');
 			}).stop(false, false);
 			return;
 		}
