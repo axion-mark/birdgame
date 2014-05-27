@@ -87,15 +87,15 @@ function alive() {
 	var stageHeight = $('.stage').height();
 	var spritePosition = $('.sprite').position();
 	$('.data').html('stage height: '+stageHeight+' position: '+spritePosition.top);
-	if (spritePosition.top < 0) {
+	if (spritePosition.top < 10) {
 		$('.sprite').stop(false, false);
 		alert("You've gone too high!");
 		$('.sprite').css('top', '50%');
 		return;
 	}
-	if (parseInt(spritePosition.top) > parseInt(stageHeight)) {
+	if (parseInt(spritePosition.top) > parseInt(stageHeight) - 10) {
 		$('.sprite').stop(false, false);
-		alert("You've gone too high!");
+		alert("You've gone too low!");
 		$('.sprite').css('top', '50%');
 		return;
 	}
