@@ -56,7 +56,7 @@ jQuery(document).ready(function($) {
 		if($('.sprite').hasClass('stationary')) {} else {
 			addObstacle();
 		}
-	}, 2500);
+	}, 750);
 	var stage = document.getElementById("stage");
 	stage.addEventListener('touchstart', jump, false);
 });
@@ -65,7 +65,7 @@ function addObstacle() {
 	$('.stage').append('<div class="obstacle"></div>');
 	$('.obstacle').animate({
 		right: "+=1000"
-	}, 3000, "linear");
+	}, 10000, "linear");
 }
 
 function jump() {
