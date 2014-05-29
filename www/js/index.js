@@ -70,7 +70,7 @@ function randsort(range) {
 }
 
 function addObstacle() {
-	var obstacle = randsort(7);
+	var obstacle = randsort(14);
 	$('.stage').append('<div class="obstacle"><div class="obstacle-top ob'+obstacle+'"></div><div class="obstacle-bottom ob'+obstacle+'"></div></div>');
 	$('.obstacle').animate({
 		right: "+=1000"

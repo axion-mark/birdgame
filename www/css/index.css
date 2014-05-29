@@ -76,41 +76,83 @@ body {
 	height: 50px;
 }
 .obstacle-top.ob2 {
-	height: 100px;
+	height: 75px;
 }
 .obstacle-top.ob3 {
-	height: 150px;
-}
-.obstacle-top.ob4 {
-	height: 200px;
-}
-.obstacle-top.ob5 {
-	height: 250px;
-}
-.obstacle-top.ob6 {
-	height: 300px;
-}
-.obstacle-top.ob7 {
-	height: 350px;
-}
-.obstacle-bottom.ob1 {
-	height: 350px;
-}
-.obstacle-bottom.ob2 {
-	height: 300px;
-}
-.obstacle-bottom.ob3 {
-	height: 250px;
-}
-.obstacle-bottom.ob4 {
-	height: 200px;
-}
-.obstacle-bottom.ob5 {
-	height: 150px;
-}
-.obstacle-bottom.ob6 {
 	height: 100px;
 }
+.obstacle-top.ob4 {
+	height: 125px;
+}
+.obstacle-top.ob5 {
+	height: 150px;
+}
+.obstacle-top.ob6 {
+	height: 175px;
+}
+.obstacle-top.ob7 {
+	height: 200px;
+}
+.obstacle-top.ob8 {
+	height: 225px;
+}
+.obstacle-top.ob9 {
+	height: 250px;
+}
+.obstacle-top.ob10 {
+	height: 275px;
+}
+.obstacle-top.ob11 {
+	height: 300px;
+}
+.obstacle-top.ob12 {
+	height: 325px;
+}
+.obstacle-top.ob13 {
+	height: 350px;
+}
+.obstacle-top.ob14 {
+	height: 375px;
+}
+.obstacle-bottom.ob1 {
+	height: 375px;
+}
+.obstacle-bottom.ob2 {
+	height: 350px;
+}
+.obstacle-bottom.ob3 {
+	height: 325px;
+}
+.obstacle-bottom.ob4 {
+	height: 300px;
+}
+.obstacle-bottom.ob5 {
+	height: 275px;
+}
+.obstacle-bottom.ob6 {
+	height: 250px;
+}
 .obstacle-bottom.ob7 {
+	height: 225px;
+}
+.obstacle-bottom.ob8 {
+	height: 200px;
+}
+.obstacle-bottom.ob9 {
+	height: 175px;
+}
+.obstacle-bottom.ob10 {
+	height: 150px;
+}
+.obstacle-bottom.ob11 {
+	height: 125px;
+}
+.obstacle-bottom.ob12 {
+	height: 100px;
+}
+.obstacle-bottom.ob13 {
+	height: 75px;
+}
+.obstacle-bottom.ob14 {
 	height: 50px;
 }
