@@ -74,7 +74,7 @@ function addObstacle() {
 	$('.stage').append('<div class="obstacle"><div class="obstacle-top ob'+obstacle+'"></div><div class="obstacle-bottom ob'+obstacle+'"></div></div>');
 	$('.obstacle').animate({
 		right: "+=1000"
-	}, 10000, "linear");
+	}, 15000, "linear");
 }
 
 function jump() {
