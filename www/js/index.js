@@ -51,7 +51,7 @@ var app = {
 jQuery(document).ready(function($) {
 	window.setInterval(function(){
 		alive();
-	}, 100);
+	}, 200);
 	window.setInterval(function(){
 		if($('.sprite').hasClass('stationary')) {} else {
 			addObstacle();
@@ -74,7 +74,7 @@ function addObstacle() {
 	$('.stage').append('<div class="obstacle"><div class="obstacle-top ob'+obstacle+'"></div><div class="obstacle-bottom ob'+obstacle+'"></div></div>');
 	$('.obstacle').animate({
 		right: "+=1000"
-	}, 15000, "linear");
+	}, 20000, "linear");
 }
 
 function jump() {
@@ -91,7 +91,7 @@ function jump() {
 function alive() {
 	var stageHeight = $('.stage').height();
 	var spritePosition = $('.sprite').position();
-	if (spritePosition.top < 10) {
+	if (parseInt(spritePosition.top) < 10) {
 		$('.sprite').stop(false, false);
 		alert("You've gone too high!");
 		$('.sprite').css('top', '50%').addClass('stationary');
