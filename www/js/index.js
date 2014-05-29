@@ -51,7 +51,7 @@ var app = {
 jQuery(document).ready(function($) {
 	window.setInterval(function(){
 		alive();
-	}, 1);
+	}, 100);
 	window.setInterval(function(){
 		if($('.sprite').hasClass('stationary')) {} else {
 			addObstacle();
@@ -61,8 +61,17 @@ jQuery(document).ready(function($) {
 	stage.addEventListener('touchstart', jump, false);
 });
 
+function randsort(range) {
+    for (var i = 0; i < 1; i++) {
+        var n = Math.floor(Math.random()*range);
+        o = n+1;
+    }
+    return o;
+}
+
 function addObstacle() {
-	$('.stage').append('<div class="obstacle"><div class="obstacle-top"></div><div class="obstacle-bottom"></div></div>');
+	var obstacle = randsort(7);
+	$('.stage').append('<div class="obstacle"><div class="obstacle-top ob'+obstacle+'"></div><div class="obstacle-bottom ob'+obstacle+'"></div></div>');
 	$('.obstacle').animate({
 		right: "+=1000"
 	}, 10000, "linear");

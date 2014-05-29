@@ -62,15 +62,55 @@ body {
 }
 .obstacle-top {
 	width: 100%;
-	height: 200px;
 	position: absolute;
 	top: 0px;
 	background: #333333;
 }
 .obstacle-bottom {
 	width: 100%;
-	height: 200px;
 	position: absolute;
 	bottom: 0px;
 	background: #333333;
+}
+.obstacle-top.ob1 {
+	height: 50px;
+}
+.obstacle-top.ob2 {
+	height: 100px;
+}
+.obstacle-top.ob3 {
+	height: 150px;
+}
+.obstacle-top.ob4 {
+	height: 200px;
+}
+.obstacle-top.ob5 {
+	height: 250px;
+}
+.obstacle-top.ob6 {
+	height: 300px;
+}
+.obstacle-top.ob7 {
+	height: 350px;
+}
+.obstacle-bottom.ob1 {
+	height: 350px;
+}
+.obstacle-bottom.ob2 {
+	height: 300px;
+}
+.obstacle-bottom.ob3 {
+	height: 250px;
+}
+.obstacle-bottom.ob4 {
+	height: 200px;
+}
+.obstacle-bottom.ob5 {
+	height: 150px;
+}
+.obstacle-bottom.ob6 {
+	height: 100px;
+}
+.obstacle-bottom.ob7 {
+	height: 50px;
 }
