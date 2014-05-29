@@ -49,10 +49,12 @@ var app = {
 };
 
 jQuery(document).ready(function($) {
-	window.setInterval(function(){
-		alive();
-	}, 200);
-	window.setInterval(function(){
+
+	/*window.setInterval(function() {   // need to
+		alive();                      // find a
+	}, 200);                          // better way (super glitchy) */
+	
+	window.setInterval(function() {
 		if($('.sprite').hasClass('stationary')) {} else {
 			addObstacle();
 		}
