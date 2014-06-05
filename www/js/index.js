@@ -108,7 +108,7 @@ function alive() {
 		$('.obstacle').remove();
 		return;
 	}
-	var obstaclePosition = $('.obstacle').position();
+	var obstaclePosition = $('.obstacle:first').position();
 	
 	if (parseInt(obstaclePosition.left) < 200) {
 		$(this).children('.obstacle-top').css('background', '#1f5193');
