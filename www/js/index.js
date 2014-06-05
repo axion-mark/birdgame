@@ -50,9 +50,9 @@ var app = {
 
 jQuery(document).ready(function($) {
 
-	/*window.setInterval(function() {   // need to
+	window.setInterval(function() {   // need to
 		alive();                      // find a
-	}, 200);                          // better way (super glitchy) */
+	}, 1);                          // better way (super glitchy) 
 	
 	window.setInterval(function() {
 		if($('.sprite').hasClass('stationary')) {} else {
