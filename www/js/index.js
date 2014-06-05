@@ -83,7 +83,7 @@ function jump() {
 	$('.sprite').stop(true, false).removeClass('stationary');
 	$('.sprite').animate({
 	    top: "-=50"
-	}, 300, function() {
+	}, 150, function() {
 	    $('.sprite').animate({
 		    top: "+=1000"
 		}, 1500);
@@ -94,7 +94,7 @@ function alive() {
 	var stageHeight = $('.stage').height();
 	var spritePosition = $('.sprite').position();
 	
-	/*if (parseInt(spritePosition.top) < 10) {
+	if (parseInt(spritePosition.top) < 10) {
 		$('.sprite').stop(false, false);
 		alert("You've gone too high!");
 		$('.sprite').css('top', '50%').addClass('stationary');
@@ -107,5 +107,5 @@ function alive() {
 		$('.sprite').css('top', '50%').addClass('stationary');
 		$('.obstacle').remove();
 		return;
-	}*/
+	}
 }
