@@ -52,7 +52,7 @@ jQuery(document).ready(function($) {
 
 	window.setInterval(function() {   // need to
 		alive();                      // find a
-	}, 1);                          // better way (super glitchy) 
+	}, 10);                          // better way (super glitchy) 
 	
 	window.setInterval(function() {
 		if($('.sprite').hasClass('stationary')) {} else {
@@ -82,7 +82,7 @@ function addObstacle() {
 function jump() {
 	$('.sprite').stop(true, false).removeClass('stationary');
 	$('.sprite').animate({
-	    top: "-=100"
+	    top: "-=50"
 	}, 300, function() {
 	    $('.sprite').animate({
 		    top: "+=1000"
@@ -93,7 +93,8 @@ function jump() {
 function alive() {
 	var stageHeight = $('.stage').height();
 	var spritePosition = $('.sprite').position();
-	if (parseInt(spritePosition.top) < 10) {
+	
+	/*if (parseInt(spritePosition.top) < 10) {
 		$('.sprite').stop(false, false);
 		alert("You've gone too high!");
 		$('.sprite').css('top', '50%').addClass('stationary');
@@ -106,5 +107,5 @@ function alive() {
 		$('.sprite').css('top', '50%').addClass('stationary');
 		$('.obstacle').remove();
 		return;
-	}
+	}*/
 }
