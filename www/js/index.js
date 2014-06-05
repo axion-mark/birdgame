@@ -82,8 +82,8 @@ function addObstacle() {
 function jump() {
 	$('.sprite').stop(true, false).removeClass('stationary');
 	$('.sprite').animate({
-	    top: "-=50"
-	}, 150, function() {
+	    top: "-=70"
+	}, 200, function() {
 	    $('.sprite').animate({
 		    top: "+=1000"
 		}, 1500);
