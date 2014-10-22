@@ -108,10 +108,12 @@ function alive() {
 		$('.obstacle').remove();
 		return;
 	}
-	var obstaclePosition = $('.obstacle:first').position();
+	
+	$('.obstacle:first').children('.obstacle-top').css('background', '#1f5193');
+	/*var obstaclePosition = $('.obstacle:first').position();
 	
 	if (parseInt(obstaclePosition.left) < 200) {
 		$(this).children('.obstacle-top').css('background', '#1f5193');
 		$(this).children('.obstacle-top').css('background', '#1f5193');
-	}
+	}*/
 }
